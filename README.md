@@ -22,14 +22,17 @@ The client receives the following arguments at runtime. For more information abo
 
 The Publish command sends the message given in the message argument to the server under the title of the topic argument. This command waits for 10 seconds until the PubAck message arrives from the server and informs the user if it is received successfully. Otherwise, an appropriate error will be displayed.
 
+```
 > python3 client.py <host> <port> publish <topic> <message>
 > your message published successfully # in case of success
 > your message publishing failed # in case of failure
+```
 
 The Subscribe command informs the server that we are requesting to receive the messages of the topics given under the topic arguments.
  Please note that this command can be called with one or more topics and you need to use Thread to have multiple connections with the server at the same time. (For more information, you can refer here). For each title, you need to send a Subscribe message and receive a SubAck message within a limited period of 10 seconds. If the Subscribe message is not received within this limited period, your program should end with the appropriate message. Finally, the program should listen on all created sockets to display the received messages to the user in the form of a Message command.
  
- > python3 client.py <host> <port> subscribe <topic-1> <topic-2> ... <topic-n>
+ ```
+> python3 client.py <host> <port> subscribe <topic-1> <topic-2> ... <topic-n>
 > # in case of success
 > subscribing on <topic-1> <topic-2> ... <topic-n>
 > <topic-1>: message
@@ -37,3 +40,4 @@ The Subscribe command informs the server that we are requesting to receive the m
 > <topic-1>: message
 > # in case of failure
 > subscribing failed
+ ```
