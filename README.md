@@ -18,7 +18,7 @@ A message broker is a server that distributes messages received from clients. Of
 The server has a server socket that listens on a specific port (here we assume the desired port is 1370). Since the server is going to handle several simultaneous connections, you will need to create a Thread for each connection so that the accept function is called immediately. The server does not close any connection and keeps all connections open. For the server, each connection represents a client, so it must have a list of sockets and their desired titles. Be careful that the server should also consider the status of connections and avoid sending data on closed connections.
 
 ## Client implementation:
-The client receives the following arguments at runtime. For more information about arguments in Python, you can use here. The client has two main commands:
+The client receives the following arguments at runtime. For more information about arguments in Python, you can use [here](https://realpython.com/python-command-line-arguments/). The client has two main commands:
 
 The Publish command sends the message given in the message argument to the server under the title of the topic argument. This command waits for 10 seconds until the PubAck message arrives from the server and informs the user if it is received successfully. Otherwise, an appropriate error will be displayed.
 
