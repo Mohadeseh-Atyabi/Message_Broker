@@ -1,6 +1,8 @@
 # Message_Broker
 A message broker is a server that distributes messages received from clients. Of course, these brokers do more things that are beyond our discussion. There are two important operations in the server, one is to subscribe and the other is to publish. In the subscribe operation, the client requests to listen to a specific topic. In publish, the client publishes a rar message of a specific topic. Finally, the broker delivers the messages to all those listening on that thread. In this section, all communication between the client and the server is implemented in TCP format.
 
+![image](https://user-images.githubusercontent.com/72689599/178944822-d2babce8-19b2-4c70-930f-59e2cd3e6366.png)
+
 ## Client to server commands:
 - Publish: This command sends a message from the client side to the server under a specific title. Messages are ASCII strings of arbitrary length.
 - Subscribe: This command informs the server that this client is requesting to receive messages with the given title.
